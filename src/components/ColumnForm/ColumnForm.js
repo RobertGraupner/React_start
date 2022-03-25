@@ -1,17 +1,19 @@
 import styles from "./ColumnForm.module.scss";
 import { useState } from "react";
+import { useDispatch } from "react-redux";
 import Button from "./../Button/Button";
 import TextInput from "./../TextInput/TextInput";
 
 const ColumnForm = (props) => {
 	const [title, setTitle] = useState('');
-  const [icon, setIcon] = useState('');
+	const [icon, setIcon] = useState('');
+	const dispatch = useDispatch();
   
 	const handleSubmit = (e) => {
 		e.preventDefault();
-		props.action({ title: title, icon: icon });
-    setTitle("");
-    setIcon("");
+		dispatch({ type: "ADD_COLUMN", payload: { title, icon } });
+		setTitle('');
+		setIcon('');
 	};
 
 	return (
