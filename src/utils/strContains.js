@@ -1,9 +1,5 @@
 const strContains = (firstStr, secondSrt) => {
-  if (firstStr.toLowerCase().includes(secondSrt.toLowerCase())) {
-		return true;
-	} else {
-		return false;
-	};
+	return firstStr.toLowerCase().includes(secondSrt.toLowerCase());
 };
 
 export default strContains;
