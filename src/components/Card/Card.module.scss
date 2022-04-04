@@ -11,3 +11,12 @@
     justify-content: space-between;
     font-weight: bold;
 }
+
+button {
+    border: none;
+    color: $color-dark;
+    background-color: inherit;
+}
+.active {
+    color: gold;
+}
