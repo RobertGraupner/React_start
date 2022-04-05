@@ -3,7 +3,7 @@ import TextInput from '../TextInput/TextInput.js';
 import Button from "../Button/Button.js";
 import { useDispatch } from 'react-redux';
 import { useState } from 'react';
-import { updateSearchString } from '../../redux/store';
+import { updateSearchString } from '../../redux/searchStringRedux';
 import { useEffect } from 'react';
 
 const SearchForm = () => {
@@ -19,7 +19,7 @@ const SearchForm = () => {
 
 	useEffect(() => {
 		dispatch(updateSearchString({ searchString: '' }))
-	}, []);
+	},[]);
 
 	return (
 		<form className={styles.searchForm} onSubmit = {handleSubmit}>
