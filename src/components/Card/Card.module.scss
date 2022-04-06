@@ -17,7 +17,20 @@ button {
     color: $color-dark;
     background-color: inherit;
     cursor: pointer;
+    :hover {
+        transform: scale(1.25);
+    }
 }
 .active {
-    color: gold;
+    color: $color-gold;
+}
+
+.buttonRemove {
+    position: absolute;
+    right: 10px;
+}
+
+.buttonToggle {
+    position: absolute;
+    right: 35px;
 }

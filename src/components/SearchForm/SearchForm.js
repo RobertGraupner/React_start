@@ -18,7 +18,7 @@ const SearchForm = () => {
 	};
 
 	useEffect(() => {
-		dispatch(updateSearchString({ searchString: '' }))
+		dispatch(updateSearchString({ searchString: "" }));
 	},[]);
 
 	return (
